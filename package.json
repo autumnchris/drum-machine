@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/autumnchris/drum-machine/issues"
   },
-  "homepage": "https://autumnchris.github.io/drum-machine"
+  "homepage": "https://autumnchris.github.io/drum-machine",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
 }
