@@ -8,7 +8,11 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="body"></div>
+      <div className="body">
+        <header>
+          <h1>Drum Machine</h1>
+        </header>
+      </div>
     );
   }
 }
