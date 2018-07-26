@@ -14,6 +14,55 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      audioData: [
+        {
+          type: 'clap',
+          key: 'Q',
+          sound: clap
+        },
+        {
+          type: 'hihat',
+          key: 'W',
+          sound: hihat
+        },
+        {
+          type: 'kick',
+          key: 'E',
+          sound: kick
+        },
+        {
+          type: 'openhat',
+          key: 'A',
+          sound: openhat
+        },
+        {
+          type: 'boom',
+          key: 'S',
+          sound: boom
+        },
+        {
+          type: 'ride',
+          key: 'D',
+          sound: ride
+        },
+        {
+          type: 'snare',
+          key: 'Z',
+          sound: snare
+        },
+        {
+          type: 'tom',
+          key: 'X',
+          sound: tom
+        },
+        {
+          type: 'tink',
+          key: 'C',
+          sound: tink
+        }
+      ]
+    };
   }
 
   render() {
