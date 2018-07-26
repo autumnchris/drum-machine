@@ -12,6 +12,7 @@ export default class App extends Component {
         <header>
           <h1>Drum Machine</h1>
         </header>
+        <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
   }
