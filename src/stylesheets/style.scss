@@ -1,3 +1,11 @@
 $black: #000;
 $blue: #51aaff;
 $purple: hsl(274, 93%, 71%);
+
+html {
+  background: $black;
+  background: linear-gradient(120deg, $black, hsl(0, 0%, 18%)) fixed;
+  main {
+    padding-bottom: 60px;
+  }
+}
