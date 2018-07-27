@@ -69,6 +69,12 @@ export default class App extends Component {
     this.playSound = this.playSound.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener('keydown', (event) => {
+      this.playSound(event);
+    });
+  }
+
   playSound(event, key) {
 
     switch (key || event.keyCode) {
