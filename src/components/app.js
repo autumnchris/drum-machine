@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ButtonGroup from './button-group';
+import Display from './display';
 
 const clap = require('.././audio/clap.wav');
 const hihat = require('.././audio/hihat.wav');
@@ -62,7 +63,8 @@ export default class App extends Component {
           key: 'C',
           sound: tink
         }
-      ]
+      ],
+      currentAudio: ''
     };
   }
 
@@ -74,6 +76,7 @@ export default class App extends Component {
         </header>
         <main>
           <ButtonGroup buttons={this.state.audioData} />
+          <Display currentAudio={this.state.currentAudio} />
         </main>
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
