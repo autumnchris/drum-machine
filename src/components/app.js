@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ButtonGroup from './button-group';
 
 const clap = require('.././audio/clap.wav');
 const hihat = require('.././audio/hihat.wav');
@@ -71,6 +72,9 @@ export default class App extends Component {
         <header>
           <h1>Drum Machine</h1>
         </header>
+        <main>
+          <ButtonGroup buttons={this.state.audioData} />
+        </main>
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
