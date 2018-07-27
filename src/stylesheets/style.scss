@@ -2,6 +2,11 @@ $black: #000;
 $blue: #51aaff;
 $purple: hsl(274, 93%, 71%);
 
+*:focus {
+  box-shadow: 0 0 3px 3px $purple;
+  outline: none;
+}
+
 html {
   background: $black;
   background: linear-gradient(120deg, $black, hsl(0, 0%, 18%)) fixed;
@@ -14,5 +19,25 @@ html {
   }
   main {
     padding-bottom: 60px;
+    padding-bottom: 60px;
+    .button-group {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: center;
+      .drum-pad,
+      .drum-pad:hover,
+      .drum-pad:active,
+      .drum-pad:focus {
+        align-self: center;
+        background: $blue;
+        border-radius: 4px;
+        color: $black;
+        font-size: 2.5rem;
+        font-weight: 600;
+        height: 70px;
+        margin: 10px;
+        width: 70px;
+      }
+    }
   }
 }
