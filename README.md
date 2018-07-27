@@ -7,3 +7,14 @@ My project for the [Build a Drum Machine challenge](https://learn.freecodecamp.o
 ## Demo
 
 View project demo at [https://autumnchris.github.io/drum-machine](https://autumnchris.github.io/drum-machine).
+
+## Installation
+
+```
+$ git clone https://github.com/autumnchris/random-quote-machine-react.git
+$ cd random-quote-machine-react
+$ npm install
+$ npm start
+```
+
+Go to `http://localhost:8080`.
