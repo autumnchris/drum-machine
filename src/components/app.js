@@ -88,6 +88,7 @@ export default class App extends Component {
     return this.state.audioData.map((sound) => {
 
       if (key === sound.key || event.keyCode === sound.keyCode) {
+        document.getElementById(sound.key).currentTime = 0;
         document.getElementById(sound.key).play();
         this.setState({
           currentAudio: sound.type
