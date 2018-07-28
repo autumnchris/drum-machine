@@ -4,6 +4,14 @@ My project for the [Build a Drum Machine challenge](https://learn.freecodecamp.o
 
 ---
 
+## Built With
+* [React](https://reactjs.org)
+* [Sass](http://sass-lang.com)
+* [Webpack](https://webpack.js.org)
+* [Drum sound effects](https://github.com/wesbos/JavaScript30)
+* [Google Fonts](https://fonts.google.com)
+* [Babel](https://babeljs.io)
+
 ## Demo
 
 View project demo at [https://autumnchris.github.io/drum-machine](https://autumnchris.github.io/drum-machine).
