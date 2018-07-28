@@ -21,46 +21,55 @@ export default class App extends Component {
         {
           type: 'clap',
           key: 'Q',
+          keyCode: 81,
           sound: clap
         },
         {
           type: 'hihat',
           key: 'W',
+          keyCode: 87,
           sound: hihat
         },
         {
           type: 'kick',
           key: 'E',
+          keyCode: 69,
           sound: kick
         },
         {
           type: 'openhat',
           key: 'A',
+          keyCode: 65,
           sound: openhat
         },
         {
           type: 'boom',
           key: 'S',
+          keyCode: 83,
           sound: boom
         },
         {
           type: 'ride',
           key: 'D',
+          keyCode: 68,
           sound: ride
         },
         {
           type: 'snare',
           key: 'Z',
+          keyCode: 90,
           sound: snare
         },
         {
           type: 'tom',
           key: 'X',
+          keyCode: 88,
           sound: tom
         },
         {
           type: 'tink',
           key: 'C',
+          keyCode: 67,
           sound: tink
         }
       ],
@@ -76,71 +85,15 @@ export default class App extends Component {
   }
 
   playSound(event, key) {
+    return this.state.audioData.map((sound) => {
 
-    switch (key || event.keyCode) {
-      case 'Q':
-      case 81:
-          document.getElementById('Q').play();
-          this.setState({
-            currentAudio: 'clap'
-          });
-          break;
-        case 'W':
-        case 87:
-          document.getElementById('W').play();
-          this.setState({
-            currentAudio: 'hihat'
-          });
-          break;
-        case 'E':
-        case 69:
-          document.getElementById('E').play();
-          this.setState({
-            currentAudio: 'kick'
-          });
-          break;
-        case 'A':
-        case 65:
-          document.getElementById('A').play();
-          this.setState({
-            currentAudio: 'openhat'
-          });
-          break;
-        case 'S':
-        case 83:
-          document.getElementById('S').play();
-          this.setState({
-            currentAudio: 'boom'
-          });
-          break;
-        case 'D':
-        case 68:
-          document.getElementById('D').play();
-          this.setState({
-            currentAudio: 'ride'
-          });
-          break;
-        case 'Z':
-        case 90:
-          document.getElementById('Z').play();
-          this.setState({
-            currentAudio: 'snare'
-          });
-          break;
-        case 'X':
-        case 88:
-          document.getElementById('X').play();
-          this.setState({
-            currentAudio: 'tom'
-          });
-          break;
-        case 'C':
-        case 67:
-          document.getElementById('C').play();
-          this.setState({
-            currentAudio: 'tink'
-          });
-    }
+      if (key === sound.key || event.keyCode === sound.keyCode) {
+        document.getElementById(sound.key).play();
+        this.setState({
+          currentAudio: sound.type
+        });
+      }
+    });
   }
 
   render() {
