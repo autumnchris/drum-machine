@@ -19,8 +19,8 @@ View project demo at [https://autumnchris.github.io/drum-machine](https://autumn
 ## Installation
 
 ```
-$ git clone https://github.com/autumnchris/random-quote-machine-react.git
-$ cd random-quote-machine-react
+$ git clone https://github.com/autumnchris/drum-machine.git
+$ cd drum-machine
 $ npm install
 $ npm start
 ```
