@@ -9,6 +9,7 @@ My project for the [Build a Drum Machine challenge](https://learn.freecodecamp.o
 * [Sass](http://sass-lang.com)
 * [Webpack](https://webpack.js.org)
 * [Drum sound effects](https://github.com/wesbos/JavaScript30)
+* [Digital 7 font](https://www.dafont.com/digital-7.font)
 * [Google Fonts](https://fonts.google.com)
 * [Babel](https://babeljs.io)
 

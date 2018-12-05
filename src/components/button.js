@@ -3,7 +3,11 @@ import React from 'react';
 const Button = ({ button, playSound }) => {
 
   return (
-    <button type="button" className="drum-pad" onClick={(event) => playSound(event, button.key)} id={button.type}>{button.key}<audio src={button.sound} className="clip" id={button.key} /></button>
+    <div className="drum-pad" onClick={(event) => playSound(event, button.key)} tabIndex="-1" id={button.type}>
+      <div className="sound-type">{button.type}</div>
+      <div className="sound-key">{button.key}</div>
+      <audio src={button.sound} className="clip" id={button.key} />
+    </div>
   );
 }
 

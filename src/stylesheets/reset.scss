@@ -11,9 +11,7 @@ h5,
 h6,
 div,
 a,
-button,
-audio,
-p {
+audio {
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -50,11 +48,4 @@ a:focus {
   &:hover {
     text-decoration: underline;
   }
-}
-
-button,
-button:hover,
-button:active,
-button:focus {
-  cursor: pointer;
 }

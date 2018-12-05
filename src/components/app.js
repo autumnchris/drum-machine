@@ -104,8 +104,8 @@ export default class App extends Component {
           <h1>Drum Machine</h1>
         </header>
         <main>
-          <ButtonGroup buttons={this.state.audioData} playSound={this.playSound} />
           <Display currentAudio={this.state.currentAudio} />
+          <ButtonGroup buttons={this.state.audioData} playSound={this.playSound} />
         </main>
         <footer>Coded by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a></footer>
       </div>

@@ -27,6 +27,13 @@ module.exports = {
         }
       },
       {
+        test: /\.(ttf|otf|eot|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 100000,
+        }
+      },
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
           use:['css-loader', 'sass-loader'],

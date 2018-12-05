@@ -3,7 +3,7 @@ import React from 'react';
 const Display = ({ currentAudio }) => {
 
   return (
-    <p className="display">{currentAudio}</p>
+    <div className="display">{currentAudio}</div>
   );
 }
 

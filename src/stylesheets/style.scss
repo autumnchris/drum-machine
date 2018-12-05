@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "digital 7 italic";
+  src: url(../fonts/digital-7-italic.ttf);
+}
+
 $black: #000;
 $blue: #51aaff;
 $purple: hsl(274, 93%, 71%);
+$screen-font: "digital 7 italic", Helvetica, Arial, sans-serif;
 
 *:focus {
   box-shadow: 0 0 3px 3px $purple;
@@ -19,31 +25,58 @@ html {
   }
   main {
     padding-bottom: 60px;
+    .display {
+      background: hsl(0, 0%, 65%);
+      border-radius: 3px;
+      box-shadow: 0 -2px 10px 1px hsl(0, 0%, 50%);
+      color: $black;
+      font-family: $screen-font;
+      font-size: 1.3rem;
+      height: 30px;
+      letter-spacing: 3px;
+      margin: 0 auto 10px;
+      padding-top: 8px;
+      padding-left: 5px;
+      text-align: left;
+      text-transform: uppercase;
+      width: 200px;
+    }
     .button-group {
       display: grid;
       grid-template-columns: auto auto auto;
       justify-content: center;
       .drum-pad,
-      .drum-pad:hover,
-      .drum-pad:active,
-      .drum-pad:focus {
-        align-self: center;
-        background: $blue;
-        border-radius: 4px;
-        color: $black;
-        font-size: 2.5rem;
-        font-weight: 600;
+      .drum-pad:hover {
+        border: 2px solid $blue;
+        border-radius: 6px;
+        cursor: pointer;
         height: 70px;
         margin: 10px;
+        text-transform: uppercase;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         width: 70px;
+        &:active {
+          background: radial-gradient(circle, hsl(0, 0%, 45%), $black);
+        }
+        &:focus {
+          box-shadow: none;
+        }
+        .sound-type {
+          color: $blue;
+          font-size: 0.6rem;
+          font-style: italic;
+          margin-top: 4px;
+          margin-left: 4px;
+          text-align: left;
+        }
+        .sound-key {
+          font-size: 2rem;
+          margin-top: 7px;
+        }
       }
-    }
-    .display {
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      margin-top: 30px;
-      text-transform: uppercase;
     }
   }
   footer {
