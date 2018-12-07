@@ -5,7 +5,7 @@ My project for the [Build a Drum Machine challenge](https://learn.freecodecamp.o
 ---
 
 ## Built With
-* [React](https://reactjs.org)
+* [React.js](https://reactjs.org)
 * [Sass](http://sass-lang.com)
 * [Webpack](https://webpack.js.org)
 * [Drum sound effects](https://github.com/wesbos/JavaScript30)
