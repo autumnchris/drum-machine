@@ -3,10 +3,8 @@
   src: url(../fonts/digital-7-italic.ttf);
 }
 
-$black: #000;
-$blue: #51aaff;
-$purple: hsl(274, 93%, 71%);
-$screen-font: "digital 7 italic", Helvetica, Arial, sans-serif;
+@import 'variables';
+@import 'reset';
 
 *:focus {
   box-shadow: 0 0 3px 3px $purple;
