@@ -107,7 +107,7 @@ export default class App extends Component {
           <Display currentAudio={this.state.currentAudio} />
           <ButtonGroup buttons={this.state.audioData} playSound={this.playSound} />
         </main>
-        <footer>Coded by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a></footer>
+        <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
       </div>
     );
   }
