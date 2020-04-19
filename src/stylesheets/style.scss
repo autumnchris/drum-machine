@@ -91,8 +91,11 @@ textarea:focus,
 .button:active,
 .button:focus {
   border: 0;
+  border-radius: 0;
   cursor: pointer;
+  line-height: normal;
   padding: 0;
+  width: auto;
   &:hover {
     text-decoration: none;
   }

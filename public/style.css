@@ -78,8 +78,11 @@ textarea:focus,
 .button:active,
 .button:focus {
   border: 0;
+  border-radius: 0;
   cursor: pointer;
-  padding: 0; }
+  line-height: normal;
+  padding: 0;
+  width: auto; }
   .button:hover,
   .button:visited:hover,
   .button:hover:hover,
