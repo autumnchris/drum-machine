@@ -17,7 +17,7 @@ html {
     padding: 0 20px;
     position: relative; }
     html body header {
-      padding-top: 30px; }
+      padding-top: 50px; }
     html body main {
       padding-bottom: 6rem; }
     html body footer {
@@ -77,6 +77,7 @@ textarea:focus,
 .button:hover,
 .button:active,
 .button:focus {
+  background: transparent;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -89,6 +90,35 @@ textarea:focus,
   .button:active:hover,
   .button:focus:hover {
     text-decoration: none; }
+
+.instructions-container {
+  position: absolute;
+  right: 12px;
+  top: 12px; }
+  .instructions-container .instructions-button {
+    color: #51aaff;
+    display: block;
+    float: right; }
+    .instructions-container .instructions-button .fa-question-circle {
+      pointer-events: none; }
+  .instructions-container .instructions-popover {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 13px 0 #b3b3b3;
+    color: #333333;
+    font-size: 0.8rem;
+    margin-top: 25px;
+    max-width: 200px;
+    padding: 8px 12px; }
+    .instructions-container .instructions-popover p {
+      line-height: 1.4;
+      margin: 0;
+      pointer-events: none;
+      text-align: left; }
+  .instructions-container .instructions-popover.hidden {
+    display: none; }
+  .instructions-container .instructions-popover.visible {
+    display: block; }
 
 h1 {
   color: #51aaff;
@@ -125,7 +155,6 @@ h1 {
   .button-group .drum-pad:hover,
   .button-group .drum-pad:active,
   .button-group .drum-pad:focus {
-    background: transparent;
     border: 2px solid #51aaff;
     border-radius: 6px;
     color: white;
