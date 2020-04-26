@@ -22,7 +22,7 @@ html {
     padding: 0 20px;
     position: relative;
     header {
-      padding-top: 30px;
+      padding-top: 50px;
     }
     main {
       padding-bottom: 6rem;
@@ -90,6 +90,7 @@ textarea:focus,
 .button:hover,
 .button:active,
 .button:focus {
+  background: transparent;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -102,6 +103,42 @@ textarea:focus,
 }
 
 // SPECIFIC ELEMENT STYLES
+
+.instructions-container {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  .instructions-button {
+    color: $blue;
+    display: block;
+    float: right;
+    .fa-question-circle {
+      pointer-events: none;
+    }
+  }
+  .instructions-popover {
+    background: change-color($black, $lightness: 100%);
+    border-radius: 4px;
+    box-shadow: 0 0 13px 0 change-color($black, $lightness: 70%);
+    color: change-color($black, $lightness: 20%);
+    font-size: 0.8rem;
+    margin-top: 25px;
+    max-width: 200px;
+    padding: 8px 12px;
+    p {
+      line-height: 1.4;
+      margin: 0;
+      pointer-events: none;
+      text-align: left;
+    }
+  }
+  .instructions-popover.hidden {
+    display: none;
+  }
+  .instructions-popover.visible {
+    display: block;
+  }
+}
 
 h1 {
   color: $blue;
@@ -140,7 +177,6 @@ h1 {
   .drum-pad:hover,
   .drum-pad:active,
   .drum-pad:focus {
-    background: transparent;
     border: 2px solid $blue;
     border-radius: 6px;
     color: change-color($black, $lightness: 100%);

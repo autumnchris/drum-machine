@@ -73,7 +73,8 @@ export default class App extends Component {
           sound: tink
         }
       ],
-      currentAudio: ''
+      currentAudio: '',
+      instructionsPopoverClass: 'hidden'
     };
     this.playSound = this.playSound.bind(this);
   }
@@ -82,6 +83,32 @@ export default class App extends Component {
     window.addEventListener('keydown', (event) => {
       this.playSound(event);
     });
+
+    window.addEventListener('click', (event) => {
+
+      if (event.target.id !== 'instructions-button') {
+
+        if (event.target.id !== 'instructions-popover' && this.state.instructionsPopoverClass === 'visible') {
+          this.setState({
+            instructionsPopoverClass: 'hidden'
+          });
+        }
+      }
+    });
+  }
+
+  toggleInstructionsPopover() {
+
+    if (this.state.instructionsPopoverClass === 'hidden') {
+      this.setState({
+        instructionsPopoverClass: 'visible'
+      });
+    }
+    else {
+      this.setState({
+        instructionsPopoverClass: 'hidden'
+      });
+    }
   }
 
   playSound(event, key) {
@@ -101,6 +128,14 @@ export default class App extends Component {
     return (
       <div className="body">
         <header>
+          <div className="instructions-container">
+            <button type="button" className="button instructions-button" onClick={() => this.toggleInstructionsPopover()} aria-label="Instructions" title="Instructions" id="instructions-button">
+              <span className="fas fa-question-circle"></span>
+            </button>
+            <div className={`instructions-popover ${this.state.instructionsPopoverClass}`} id="instructions-popover">
+              <p>Click the buttons or press their accompanying keys on your keyboard to play their associated drum kit sounds.</p>
+            </div>
+          </div>
           <h1>Drum Machine</h1>
         </header>
         <main>
