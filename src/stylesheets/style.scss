@@ -108,10 +108,18 @@ textarea:focus,
   position: absolute;
   right: 12px;
   top: 12px;
-  .instructions-button {
+  .instructions-button,
+  .instructions-button:hover,
+  .instructions-button:active,
+  .instructions-button:focus {
+    border-radius: 4px;
     color: $blue;
-    display: block;
     float: right;
+    height: 30px;
+    width: 30px;
+    &:hover {
+      background: change-color($black, $lightness: 25%)
+    }
     .fa-question-circle {
       pointer-events: none;
     }
@@ -122,7 +130,7 @@ textarea:focus,
     box-shadow: 0 0 13px 0 change-color($black, $lightness: 70%);
     color: change-color($black, $lightness: 20%);
     font-size: 0.8rem;
-    margin-top: 25px;
+    margin-top: 38px;
     max-width: 200px;
     padding: 8px 12px;
     p {

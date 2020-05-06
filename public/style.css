@@ -95,11 +95,24 @@ textarea:focus,
   position: absolute;
   right: 12px;
   top: 12px; }
-  .instructions-container .instructions-button {
+  .instructions-container .instructions-button,
+  .instructions-container .instructions-button:hover,
+  .instructions-container .instructions-button:active,
+  .instructions-container .instructions-button:focus {
+    border-radius: 4px;
     color: #51aaff;
-    display: block;
-    float: right; }
-    .instructions-container .instructions-button .fa-question-circle {
+    float: right;
+    height: 30px;
+    width: 30px; }
+    .instructions-container .instructions-button:hover,
+    .instructions-container .instructions-button:hover:hover,
+    .instructions-container .instructions-button:active:hover,
+    .instructions-container .instructions-button:focus:hover {
+      background: #404040; }
+    .instructions-container .instructions-button .fa-question-circle,
+    .instructions-container .instructions-button:hover .fa-question-circle,
+    .instructions-container .instructions-button:active .fa-question-circle,
+    .instructions-container .instructions-button:focus .fa-question-circle {
       pointer-events: none; }
   .instructions-container .instructions-popover {
     background: white;
@@ -107,7 +120,7 @@ textarea:focus,
     box-shadow: 0 0 13px 0 #b3b3b3;
     color: #333333;
     font-size: 0.8rem;
-    margin-top: 25px;
+    margin-top: 38px;
     max-width: 200px;
     padding: 8px 12px; }
     .instructions-container .instructions-popover p {
