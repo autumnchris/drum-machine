@@ -155,7 +155,7 @@ h1 {
   text-transform: uppercase;
   width: 200px; }
 
-.button-group {
+.drum-pads-container {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: auto auto auto;
@@ -164,10 +164,10 @@ h1 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .button-group .drum-pad,
-  .button-group .drum-pad:hover,
-  .button-group .drum-pad:active,
-  .button-group .drum-pad:focus {
+  .drum-pads-container .drum-pad,
+  .drum-pads-container .drum-pad:hover,
+  .drum-pads-container .drum-pad:active,
+  .drum-pads-container .drum-pad:focus {
     border: 2px solid #51aaff;
     border-radius: 6px;
     color: white;
@@ -176,15 +176,15 @@ h1 {
     position: relative;
     text-transform: uppercase;
     width: 70px; }
-    .button-group .drum-pad:active,
-    .button-group .drum-pad:hover:active,
-    .button-group .drum-pad:active:active,
-    .button-group .drum-pad:focus:active {
+    .drum-pads-container .drum-pad:active,
+    .drum-pads-container .drum-pad:hover:active,
+    .drum-pads-container .drum-pad:active:active,
+    .drum-pads-container .drum-pad:focus:active {
       background: radial-gradient(circle, #737373, black); }
-    .button-group .drum-pad .sound-type,
-    .button-group .drum-pad:hover .sound-type,
-    .button-group .drum-pad:active .sound-type,
-    .button-group .drum-pad:focus .sound-type {
+    .drum-pads-container .drum-pad .sound-type,
+    .drum-pads-container .drum-pad:hover .sound-type,
+    .drum-pads-container .drum-pad:active .sound-type,
+    .drum-pads-container .drum-pad:focus .sound-type {
       color: #51aaff;
       display: block;
       font-size: 0.6rem;
@@ -193,10 +193,10 @@ h1 {
       letter-spacing: 1px;
       position: absolute;
       top: 4px; }
-    .button-group .drum-pad .sound-key,
-    .button-group .drum-pad:hover .sound-key,
-    .button-group .drum-pad:active .sound-key,
-    .button-group .drum-pad:focus .sound-key {
+    .drum-pads-container .drum-pad .sound-key,
+    .drum-pads-container .drum-pad:hover .sound-key,
+    .drum-pads-container .drum-pad:active .sound-key,
+    .drum-pads-container .drum-pad:focus .sound-key {
       display: block;
       font-size: 2rem;
       margin-top: 7px; }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ButtonGroup from './button-group';
+import DrumPad from './drum-pad';
 import Display from './display';
 
 const clap = require('../audio/clap.wav');
@@ -140,7 +140,7 @@ export default class App extends Component {
         </header>
         <main>
           <Display currentAudio={this.state.currentAudio} />
-          <ButtonGroup buttons={this.state.audioData} playSound={this.playSound} />
+          <div className="drum-pads-container">{this.state.audioData.map((drumPad, index) => <DrumPad key={index} drumPad={drumPad} playSound={this.playSound} />)}</div>
         </main>
         <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
       </div>
