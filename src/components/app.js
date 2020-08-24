@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import DrumPad from './drum-pad';
-import Display from './display';
+import React from 'react';
 import clap from '../audio/clap.wav';
 import hihat from '../audio/hihat.wav';
 import kick from '../audio/kick.wav';
@@ -10,8 +8,11 @@ import ride from '../audio/ride.wav';
 import snare from '../audio/snare.wav';
 import tom from '../audio/tom.wav';
 import tink from '../audio/tink.wav';
+import InstructionsPopover from './instructions-popover';
+import Display from './display';
+import DrumPad from './drum-pad';
 
-export default class App extends Component {
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -73,7 +74,7 @@ export default class App extends Component {
         }
       ],
       currentAudio: '',
-      instructionsPopoverClass: 'hidden'
+      isPopoverVisible: false
     };
     this.playSound = this.playSound.bind(this);
   }
@@ -85,27 +86,24 @@ export default class App extends Component {
 
     window.addEventListener('click', (event) => {
 
-      if (event.target.id !== 'instructions-button') {
-
-        if (event.target.id !== 'instructions-popover' && this.state.instructionsPopoverClass === 'visible') {
-          this.setState({
-            instructionsPopoverClass: 'hidden'
-          });
-        }
+      if (event.target.id !== 'instructions-button' && event.target.id !== 'instructions-popover') {
+        this.setState({
+          isPopoverVisible: false
+        });
       }
     });
   }
 
   toggleInstructionsPopover() {
 
-    if (this.state.instructionsPopoverClass === 'hidden') {
+    if (!this.state.isPopoverVisible) {
       this.setState({
-        instructionsPopoverClass: 'visible'
+        isPopoverVisible: true
       });
     }
     else {
       this.setState({
-        instructionsPopoverClass: 'hidden'
+        isPopoverVisible: false
       });
     }
   }
@@ -125,15 +123,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="body">
+      <React.Fragment>
         <header>
           <div className="instructions-container">
             <button type="button" className="button instructions-button" onClick={() => this.toggleInstructionsPopover()} aria-label="Instructions" title="Instructions" id="instructions-button">
               <span className="fas fa-question-circle"></span>
             </button>
-            <div className={`instructions-popover ${this.state.instructionsPopoverClass}`} id="instructions-popover">
-              <p>Click the buttons or press their accompanying keys on your keyboard to play their associated drum kit sounds.</p>
-            </div>
+            {this.state.isPopoverVisible ? <InstructionsPopover /> : null}
           </div>
           <h1>Drum Machine</h1>
         </header>
@@ -142,7 +138,9 @@ export default class App extends Component {
           <div className="drum-pads-container">{this.state.audioData.map((drumPad, index) => <DrumPad key={index} drumPad={drumPad} playSound={this.playSound} />)}</div>
         </main>
         <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
-      </div>
+      </React.Fragment>
     );
   }
 }
+
+export default App;
