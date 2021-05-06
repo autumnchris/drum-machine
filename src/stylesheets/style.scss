@@ -9,6 +9,7 @@
 
 html {
   background: transparent;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: change-color($black, $lightness: 100%);
   height: 100%;
@@ -16,8 +17,10 @@ html {
   text-align: center;
   body {
     background: $black;
+    background: -o-linear-gradient(330deg, $black, change-color($black, $lightness: 18%)) fixed;
     background: linear-gradient(120deg, $black, change-color($black, $lightness: 18%)) fixed;
     min-height: 100%;
+    -ms-scroll-chaining: none;
     overscroll-behavior: none;
     padding: 0 20px;
     position: relative;
@@ -43,6 +46,7 @@ html {
     h4,
     h5,
     h6 {
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-top: 0;
     }
@@ -59,6 +63,7 @@ button,
 button:hover,
 button:active,
 button:focus {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -81,6 +86,7 @@ input:focus,
 select:focus,
 textarea:focus,
 [tabindex]:focus {
+  -webkit-box-shadow: 0 0 3px 3px $purple;
   box-shadow: 0 0 3px 3px $purple;
   outline: none;
 }
@@ -135,6 +141,7 @@ textarea:focus,
   .instructions-popover {
     background: change-color($black, $lightness: 100%);
     border-radius: 4px;
+    -webkit-box-shadow: 0 0 13px 0 change-color($black, $lightness: 70%);
     box-shadow: 0 0 13px 0 change-color($black, $lightness: 70%);
     color: change-color($black, $lightness: 20%);
     font-size: 0.8rem;
@@ -160,6 +167,7 @@ h1 {
 .display {
   background: change-color($black, $lightness: 65%);
   border-radius: 3px;
+  -webkit-box-shadow: 0 -2px 10px 1px change-color($black, $lightness: 50%);
   box-shadow: 0 -2px 10px 1px change-color($black, $lightness: 50%);
   color: $black;
   font-family: $screen-font;
@@ -175,9 +183,13 @@ h1 {
 }
 
 .drum-pads-container {
+  display: -ms-grid;
   display: grid;
   grid-gap: 20px;
+  -ms-grid-columns: auto 20px auto 20px auto;
   grid-template-columns: auto auto auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -196,6 +208,7 @@ h1 {
     text-transform: uppercase;
     width: 70px;
     &:active {
+      background: -o-radial-gradient(circle, change-color($black, $lightness: 45%), $black);
       background: radial-gradient(circle, change-color($black, $lightness: 45%), $black);
     }
     .sound-type {
@@ -229,5 +242,7 @@ noscript .info-message {
   position: absolute;
   text-align: center;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
