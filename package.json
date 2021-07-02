@@ -1,7 +1,7 @@
 {
   "name": "drum-machine",
   "version": "1.0.0",
-  "description": "My project for the Build a Drum Machine challenge as part of the curriculum for the Front End Libraries Certification on freeCodeCamp.",
+  "description": "A React.js app that imitates drum kit sounds through the optional uses of the keyboard and button clicks.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",

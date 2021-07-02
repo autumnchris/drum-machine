@@ -1,6 +1,8 @@
 # Drum Machine
 
-My project for the [Build a Drum Machine challenge](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine) as part of the curriculum for the Front End Libraries Certification on [freeCodeCamp](https://www.freecodecamp.org).
+A React.js app that imitates drum kit sounds through the optional uses of the keyboard and button clicks.
+
+Inspired by the [Build a Drum Machine challenge](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine) as part of the curriculum for the [Front End Development Libraries Certification](https://www.freecodecamp.org/learn/front-end-libraries) on [freeCodeCamp](https://www.freecodecamp.org).
 
 ---
 
