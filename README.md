@@ -18,13 +18,21 @@ My project for the [Build a Drum Machine challenge](https://learn.freecodecamp.o
 
 View project demo at [https://autumnchris.github.io/drum-machine](https://autumnchris.github.io/drum-machine).
 
-## Installation
+## Instructions
 
+After forking and cloning, navigate to the repository in your command line and install the NPM packages:
 ```
-$ git clone https://github.com/autumnchris/drum-machine.git
-$ cd drum-machine
-$ npm install
-$ npm start
+npm install
 ```
 
-Go to `http://localhost:8080`.
+Run the following script in your command line to run the application:
+```
+npm start
+```
+
+Once the server is running, go to `http://localhost:8080` in your browser.
+
+Before committing any changes, run the following script to update your static files for production:
+```
+npm run build
+```
