@@ -164,6 +164,15 @@ h1 {
   letter-spacing: 4px;
 }
 
+.page-not-found-message {
+  padding-top: 10%;
+  h1 {
+    color: change-color($black, $lightness: 100%);
+    font-size: 1.9rem;
+    font-weight: 400;
+  }
+}
+
 .display {
   background: change-color($black, $lightness: 65%);
   border-radius: 3px;
