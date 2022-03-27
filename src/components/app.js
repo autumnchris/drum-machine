@@ -13,9 +13,6 @@ import Display from './display';
 import DrumPad from './drum-pad';
 
 const App = () => {
-  const [popoverVisible, setPopoverVisible] = useState(false);
-  const [currentAudio, setCurrentAudio] = useState('');
-
   const audioData = [
     {
       type: 'clap',
@@ -72,12 +69,11 @@ const App = () => {
       sound: tink
     }
   ];
+  
+  const [popoverVisible, setPopoverVisible] = useState(false);
+  const [currentAudio, setCurrentAudio] = useState('');
 
   useEffect(() => {
-    window.addEventListener('keydown', event => {
-      playSound(event);
-    });
-
     window.addEventListener('click', event => {
 
       if (event.target.id !== 'instructions-button' && event.target.id !== 'instructions-popover') {
@@ -85,6 +81,18 @@ const App = () => {
       }
     });
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('keydown', event => {
+      playSound(event);
+    });
+
+    return () => {
+      window.removeEventListener('keydown', event => {
+        playSound(event);
+      });
+    };
+  }, [playSound]);
 
   function playSound(event, key) {
     return audioData.map(sound => {
