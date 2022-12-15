@@ -8,9 +8,9 @@ import ride from '../audio/ride.wav';
 import snare from '../audio/snare.wav';
 import tom from '../audio/tom.wav';
 import tink from '../audio/tink.wav';
-import InstructionsPopover from './instructions-popover';
-import Display from './display';
-import DrumPad from './drum-pad';
+import InstructionsPopover from './Instructions-Popover';
+import Display from './Display';
+import DrumPad from './Drum-Pad';
 
 const App = () => {
   const audioData = [
