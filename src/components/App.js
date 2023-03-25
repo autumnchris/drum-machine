@@ -1,75 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import clap from '../audio/clap.wav';
-import hihat from '../audio/hihat.wav';
-import kick from '../audio/kick.wav';
-import openhat from '../audio/openhat.wav';
-import boom from '../audio/boom.wav';
-import ride from '../audio/ride.wav';
-import snare from '../audio/snare.wav';
-import tom from '../audio/tom.wav';
-import tink from '../audio/tink.wav';
+import sounds from '../data/sounds';
 import InstructionsPopover from './InstructionsPopover';
 import Display from './Display';
 import DrumPad from './DrumPad';
 
-const App = () => {
-  const audioData = [
-    {
-      type: 'clap',
-      key: 'Q',
-      keyCode: 81,
-      sound: clap
-    },
-    {
-      type: 'hihat',
-      key: 'W',
-      keyCode: 87,
-      sound: hihat
-    },
-    {
-      type: 'kick',
-      key: 'E',
-      keyCode: 69,
-      sound: kick
-    },
-    {
-      type: 'openhat',
-      key: 'A',
-      keyCode: 65,
-      sound: openhat
-    },
-    {
-      type: 'boom',
-      key: 'S',
-      keyCode: 83,
-      sound: boom
-    },
-    {
-      type: 'ride',
-      key: 'D',
-      keyCode: 68,
-      sound: ride
-    },
-    {
-      type: 'snare',
-      key: 'Z',
-      keyCode: 90,
-      sound: snare
-    },
-    {
-      type: 'tom',
-      key: 'X',
-      keyCode: 88,
-      sound: tom
-    },
-    {
-      type: 'tink',
-      key: 'C',
-      keyCode: 67,
-      sound: tink
-    }
-  ];
-  
+const App = () => {  
   const [popoverVisible, setPopoverVisible] = useState(false);
   const [currentAudio, setCurrentAudio] = useState('');
 
@@ -95,7 +30,7 @@ const App = () => {
   }, [playSound]);
 
   function playSound(event, key) {
-    return audioData.map(sound => {
+    return sounds.map(sound => {
 
       if (key === sound.key || event.keyCode === sound.keyCode) {
         document.getElementById(sound.key).currentTime = 0;
@@ -118,7 +53,7 @@ const App = () => {
       </header>
       <main>
         <Display currentAudio={currentAudio} />
-        <div className="drum-pads-container">{audioData.map((drumPad, index) => <DrumPad key={index} drumPad={drumPad} playSound={playSound} />)}</div>
+        <div className="drum-pads-container">{sounds.map((drumPad, index) => <DrumPad key={index} drumPad={drumPad} playSound={playSound} />)}</div>
       </main>
       <footer>Created by <a href="https://autumnchris.github.io/portfolio" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
     </React.Fragment>
