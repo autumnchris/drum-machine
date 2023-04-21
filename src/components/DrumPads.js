@@ -19,7 +19,7 @@ const DrumPads = ({ setCurrentAudio }) => {
   function playSound(event, key) {
     return sounds.map(sound => {
 
-      if (key === sound.key || event.keyCode === sound.keyCode) {
+      if (key === sound.key || event.key === sound.key.toLowerCase()) {
         document.getElementById(sound.key).currentTime = 0;
         document.getElementById(sound.key).play();
         setCurrentAudio(sound.type);
