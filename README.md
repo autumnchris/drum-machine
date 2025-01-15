@@ -9,6 +9,10 @@ Inspired by the [Build a Drum Machine challenge](https://learn.freecodecamp.org/
 ## Built With
 * [React.js](https://reactjs.org)
 * [Sass](http://sass-lang.com)
+* JavaScript
+* CSS3
+* HTML5
+* [Node.js](https://nodejs.org/en)
 * [Webpack](https://webpack.js.org)
 * [Normalize.css](https://necolas.github.io/normalize.css)
 * [Drum sound effects](https://github.com/wesbos/JavaScript30)
