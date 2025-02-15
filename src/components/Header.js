@@ -17,7 +17,7 @@ const Header = () => {
     <header>
       <aside>
         <div className="instructions-container">
-          <button type="button" className="button instructions-button" onClick={() => setPopoverVisible(!popoverVisible)} aria-label="Instructions" title="Instructions" id="instructions-button">
+          <button type="button" className="button instructions-button" onClick={() => setPopoverVisible(!popoverVisible)} aria-label="Drum machine instructions" title="Instructions" id="instructions-button">
             <span className="fa-solid fa-circle-question instructions-icon"></span>
           </button>
           {popoverVisible && <InstructionsPopover />}
