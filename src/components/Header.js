@@ -15,12 +15,14 @@ const Header = () => {
 
   return (
     <header>
-      <div className="instructions-container">
-        <button type="button" className="button instructions-button" onClick={() => setPopoverVisible(!popoverVisible)} aria-label="Instructions" title="Instructions" id="instructions-button">
-          <span className="fa-solid fa-circle-question instructions-icon"></span>
-        </button>
-        {popoverVisible && <InstructionsPopover />}
-      </div>
+      <aside>
+        <div className="instructions-container">
+          <button type="button" className="button instructions-button" onClick={() => setPopoverVisible(!popoverVisible)} aria-label="Instructions" title="Instructions" id="instructions-button">
+            <span className="fa-solid fa-circle-question instructions-icon"></span>
+          </button>
+          {popoverVisible && <InstructionsPopover />}
+        </div>
+      </aside>
       <h1>Drum Machine</h1>
   </header>
   );
