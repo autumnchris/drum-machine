@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "Unica One";
+  src: url(../assets/fonts/UnicaOne-Regular.ttf);
+}
+
+@font-face {
   font-family: "digital 7 italic";
   src: url(../assets/fonts/digital-7-italic.ttf);
 }
@@ -57,6 +62,7 @@ html {
       color: $blue;
       font-family: $heading-font;
       font-size: 2.4rem;
+      font-weight: 400;
       letter-spacing: 4px;
     }
   }
@@ -90,7 +96,6 @@ textarea:focus,
   h1 {
     color: change-color($black, $lightness: 100%);
     font-size: 1.9rem;
-    font-weight: 400;
   }
 }
 

@@ -17,6 +17,7 @@ Inspired by the [Build a Drum Machine challenge](https://learn.freecodecamp.org/
 * [Normalize.css](https://necolas.github.io/normalize.css)
 * [Drum sound effects](https://github.com/wesbos/JavaScript30)
 * [Digital 7 font](https://www.dafont.com/digital-7.font)
+* [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
 * [Babel](https://babeljs.io)
 

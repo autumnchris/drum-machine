@@ -32,8 +32,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(mp3|wav|ttf|otf|woff)$/,
-        type: 'asset'
+        test: /\.(mp3|wav)$/,
+        type: 'asset',
+        generator: {
+          filename: 'assets/audio/[name][ext][query]'
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "assets/fonts",
+        }
       }
     ]
   },
